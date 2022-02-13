@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jermain Jackman </title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://kit.fontawesome.com/ca69c7c9eb.js" crossorigin="anonymous"></script>
+  <script src="index.js"></script>
+  </script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init("user_cFzj2GYWUG4b8G3yo9wOA");
+    })();
+  </script>
+</head>
+
+<body>
+  <section id="landing-page">
+    <nav>
+      <ul class="nav__link--list">
+        <li class="nav__link" onclick="toggleModal()">
+          <a href="#" class="
+          nav__link--anchor
+          link__hover-effect
+          link__hover-effect--black
+          ">About</a>
+        </li>
+        <li class="nav__link">
+          <a href="#projects" class="
+          nav__link--anchor
+          link__hover-effect
+          link__hover-effect--black
+          ">Projects</a>
+        </li>
+        <li class="nav__link" onclick="toggleModal()">
+          <a href="#" class="
+          nav__link--anchor
+          link__hover-effect
+          link__hover-effect--black
+          ">Contact</a>
+        </li>
+        <li class="nav__link click" onclick="toggleContrast()">
+          <a href="#" class="
+          nav__link--anchor
+          link__hover-effect
+          link__hover-effect--black
+          "><i class="fa-solid fa-circle-half-stroke"></i></a>
+        </li>
+      </ul>
+    </nav>
+    <header class="header">
+      <div class="header__content">
+        <h1 class="title">Hey <img class="self" src="./assets/Me.jpeg" alt="image"></h1>
+        <h1 class="title title--secondary">I'm Jermain.</h1>
+        <p class="header__para">
+          I'm a <b class="blue"> Frontend Software Engineer </b> with a strong passion for building <b
+            class="blue">responsive </b> web
+          applications.
+          <br>
+          I'm
+          Insightful and detail-oriented with experience in complex business systems and client support in fast paced
+          user centric environments.
+          <br>
+          Here's a bit more <b class="blue click" onclick="toggleModal()">about me.</b>
+        </p>
+        <div class="social__list">
+          <a href="./assets/Jermain_Jackman_Fontend_Developer.pdf" target="_blank" class="social__link click">
+            <i class="fa-solid fa-file-pdf"></i>
+          </a>
+          <a href="https://google.com" target="_blank" class=" social__link click">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/jermain-jackman-a88652ba/" class=" social__link click">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+        </div>
+      </div>
+    </header>
+    <a href="#">
+      <button class="mail__btn click" onclick="toggleModal()">
+        <i class="fa-solid fa-envelope"></i>
+      </button>
+    </a>
+    <a href="#projects" class="scroll">
+      <div class="scroll__icon click"></div>
+    </a>
+    <div class="modal">
+      <div class="modal__half modal__about">
+        <h3 class="modal__title  modal__title--about">Here's a bit about<b class="blue"> Me.</b>
+        </h3>
+        <h4 class="modal__sub-title modal__sub-title--about">Frontend Software Engineer</h4>
+        <p class="modal__para">
+          I'm a 26 year-old frontend <b class="blue"> software engineer</b> </b> with a strong passion for developing
+          <b class="blue"> interactive websites.</b>
+          <br>
+          I specilaize in making API's and SPA's
+        </p>
+        <ul class="modal__icons">
+          <li class="modal__icons--each">
+            <i class="fa-brands  fa-html5"></i>
+          </li>
+          <li class="modal__icons--each">
+            <i class="fa-brands fa-js"></i>
+          </li>
+          <li class="modal__icons--each">
+            <i class="fa-brands fa-css3-alt"></i>
+          </li>
+          <li class="modal__icons--each">
+            <i class="fa-brands fa-react"></i>
+          </li>
+        </ul>
+      </div>
+      <div class="modal__half modal__contact">
+        <i class="fas fa-times modal__exit click" onclick="toggleModal()"></i>
+        <h3 class="modal__title modal__title--contact">
+          Let's have a chat!
+        </h3>
+        <h4 class="modal__sub-title modal__sub-title--contact">
+          I'm currently open to new oppertunities.
+        </h4>
+        <form id="contact__form" onsubmit="contact(event)">
+          <div class="form__item">
+            <label class="form__item--label">Name</label>
+            <input class="input" name="user_name" type="text" required></input>
+          </div>
+          <div class="form__item">
+            <label class="form__item--label">E-mail</label>
+            <input class="input" name="user_email" type="email" required></input>
+          </div>
+          <div class="form__item">
+            <label class="form__item--label">Message</label>
+            <textarea class="input" name="message" type="text" required></textarea>
+          </div>
+          <button id="contact__submit" class="form__submit">
+            Send it my way
+          </button>
+        </form>
+        <div class="modal__overlay modal__overlay--loading">
+          <i class="fas fa-spinner"></i>
+        </div>
+        <div class="modal__overlay modal__overlay--success">
+          Thanks for the message! Looking forward to speaking to you soon!
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="projects">
+    <div class="container">
+      <div class="row2">
+        <h1 class="section__title">
+          Here are some of my <span class="blue">Projects</span>
+        </h1>
+        <ul class="project__list">
+          <li class="project">
+            <div class="project__wrapper">
+              <img src="./assets/undraw_horror_movie_3988.svg" class="project__img">
+              <div class="project__wrapper--bg"></div>
+              <div class="project__description">
+                <h3 class="project__description--title">
+                  J-Movies
+                </h3>
+                <h4 class="project__description--sub-title">
+                  Html, CSS, JavaScript, React
+                </h4>
+                <p class="project__description--para">
+                  React E-commerce app that displays data about popular and recommended movies. Has the abililty to
+                  filter movies and add them to cart for purchase.
+                </p>
+                <div class="project__description--links">
+                  <a href="#" class="project__description--link">
+                    <i class="fa-brands fa-github"></i>
+                    <a href="https://www.linkedin.com/in/jermain-jackman-a88652ba/" class="project__description--link">
+                      <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="project">
+            <div class="project__wrapper">
+              <img src="./assets/undraw_online_cv_re_gn0a.svg" class="project__img" alt="">
+              <div class="project__wrapper--bg"></div>
+              <div class="project__description">
+                <h3 class="project__description--title">
+                  E-Portfolio Helper
+                </h3>
+                <h4 class="project__description--sub-title">
+                  Html, CSS
+                </h4>
+                <p class="project__description--para">
+                  E-Portfolio built using semantic HTML5 and CSS3 (+BEM) to help friends obtain full time positions.
+                  Personal information was replaced to maintain privacy.
+                </p>
+                <div class="project__description--links">
+                  <a href="#" target="_blank" class="project__description--link">
+                    <i class="fab fa-github"></i>
+                  </a>
+                  <a href="https://www.linkedin.com/in/jermain-jackman-a88652ba/" target="_blank"
+                    class="project__description--link">
+                    <i class="fa-brands fa-linkedin"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+        </ul>
+      </div>
+    </div>
+
+  </section>
+  <footer>
+    <div class="container">
+      <div class="row footer__row">
+        <div class="footer_social--list">
+          <a href="#" target="_blank" class="
+          footer__social--link
+          link__hover-effect
+          link__hover-effect--white
+        ">
+            Github
+          </a>
+          <a href="https://www.linkedin.com/in/jermain-jackman-a88652ba/" target="_blank" class="
+          footer__social--link
+          link__hover-effect
+          link__hover-effect--white
+        ">
+            LinkedIn
+          </a>
+          <a href="#" onclick="toggleModal()" class="
+          footer__social--link
+          link__hover-effect
+          link__hover-effect--white
+        ">
+            Contact
+          </a>
+          <a href="./assets/Jermain_Jackman_Fontend_Developer.pdf" target="_blank" class="
+          footer__social--link
+          link__hover-effect
+          link__hover-effect--white
+        ">
+            Resume
+          </a>
+        </div>
+        <div class="footer__copyright">Copyright © 2022 Jermain Jackman</div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
